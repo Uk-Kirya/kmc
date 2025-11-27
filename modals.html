@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Модальные окна</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="fav.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+
+<body class="d-flex flex-column vh-100 home__page">
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-12">
+                <h2>Модальные окна</h2>
+            </div>
+            <div class="col-12 d-flex flex-wrap p-4 border rounded mt-2 gap-3">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_1">Результаты анализов</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_2">Оплата (успешно)</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_3">Оплата (не успешно)</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_4">Подтверждение города</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_5">Выбор города города</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_6">Прием врача</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_7">Тест</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_8">Результат теста (хорошо)</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_9">Результат теста (средне)</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_10">Результат теста (плохо)</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_11">Отзыв</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_12">Исследуемые виды паразитов</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__1">
+                    <div class="modal__template__1__header">
+                        Результаты анализов
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__1__content">
+                        <form class="needs-validation" novalidate>
+                            <div class="input__block">
+                                <label for="f1">Штрих-код *</label>
+                                <input name="f1" type="text" id="f1" class="form-control" placeholder="Ввести" required>
+                            </div>
+                            <button type="submit" disabled>Получить результат</button>
+                            <hr>
+                            <p>* Введите 20-значный штрих-код, который указан на вашем бланке заказа анализов</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_2">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2">
+                    <div class="modal__template__2__header">
+                        Оплата прошла успешно!
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__2__content">
+                        <picture>
+                            <img src="img/a1.svg" alt="">
+                        </picture>
+                        <p class="gradient__text">Благодарим вас за доверие и желаем вам крепкого здоровья и хорошего самочувствия!</p>
+                        <hr>
+                        <p>Все детали доступны в разделе <a href="#">История</a> вашего личного кабинета</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_3">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2">
+                    <div class="modal__template__2__header">
+                        Ошибка
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__2__content modal__template__2__content__error">
+                        <picture>
+                            <img src="img/a2.svg" alt="">
+                        </picture>
+                        <p>Ошибка оплаты, попробуйте еще раз</p>
+                        <button>Повторить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_4">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__city__confirm">
+                    <div class="modal__template__2__header">
+                        Вы находитесь в Алматы?
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__2__content modal__template__2__content__error">
+                        <button>Да</button>
+                        <button>Нет, изменить город</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_5">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__city__confirm">
+                    <div class="modal__template__2__header">
+                        Выберите город
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__2__content modal__template__2__content__error">
+                        <form class="check__city">
+                            <label for="city_1">
+                                <input type="radio" name="city" id="city_1" value="Алматы">
+                                Алматы
+                            </label>
+                            <label for="city_2">
+                                <input type="radio" name="city" id="city_2" value="Астана">
+                                Астана
+                            </label>
+                            <label for="city_3">
+                                <input type="radio" name="city" id="city_3" value="Актобе">
+                                Актобе
+                            </label>
+                            <label for="city_4">
+                                <input type="radio" name="city" id="city_4" value="Шымкент">
+                                Шымкент
+                            </label>
+                            <button disabled>Подтвердить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_6">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__doctor">
+                    <div class="modal__template__1__header modal__template__1__header__doctor">
+                        Приём врача-паразитолога
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__doctor__text">
+                        <div>
+                            <strong>💡  Когда стоит обратиться?</strong>
+                            <ul>
+                                <li>При постоянной усталости, нарушениях сна и стула</li>
+                                <li>При кожных высыпаниях, зуде, аллергиях без ясной причины</li>
+                                <li>Если у вас были домашние животные, частые поездки или вы ели сырую рыбу/мясо</li>
+                                <li>При снижении веса, дефиците железа, B12, хроническом воспалении ЖКТ</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>🩺  Что делает врач на консультации?</strong>
+                            <ul>
+                                <li>Собирает подробный <strong>анамнез:</strong> симптомы, питание, образ жизни</li>
+                                <li>Назначает прицельную <strong>диагностику:</strong> анализы, ПЦР, ИФА</li>
+                                <li>Интерпретирует результаты</li>
+                                <li>Составляет <strong>индивидуальный</strong> план лечения и восстановления </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>👉  Как проходит визит?</strong>
+                            <ul>
+                                <li>Консультация длится около <strong>30–40 минут</strong></li>
+                                <li>Доступен очный и <strong>онлайн</strong> форматы</li>
+                                <li>После приема — письменные <strong>рекомендации</strong> и сопровождение при необходимости</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal__template__doctor__text__footer">
+                        <button>Пройти тест</button>
+                        <button>
+                            Найти специалиста
+                            <picture>
+                                <img src="img/arrow.svg" alt="">
+                            </picture>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_7">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__test">
+                    <div class="modal__template__1__header">
+                        Тест
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__test__content">
+                        <div class="steps__block">
+                            <!-- Текст только на первом вопросе. На остальных вопросах текста нет -->
+                            <p>Пройдите короткий тест и узнайте, стоит ли вам проверить кишечник на паразитов</p>
+                            
+                            <!-- Индикатор заполненности. На первом вопросе он заполнен на 5%. См. в стилях -->
+                            <div class="indicator__line"></div>
+                            
+                            <!-- Шаги. Активный шаг имеет стиль active__step -->
+                            <div class="steps">
+                                <div class="step active__step">
+                                    <span></span>
+                                    1
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    2
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    3
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    4
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    5
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    6
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    7
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    8
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    9
+                                </div>
+                                <div class="step">
+                                    <span></span>
+                                    10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question__block">
+                            <p>1. Часто ли у вас бывают тяжесть, вздутие или дискомфорт в животе?</p>
+                            <div>
+                                <input type="radio" id="q1_no" name="question_1" value="Нет">
+                                <label for="q1_no">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 7.00006L16.9999 17" stroke="#0061EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.00008 17L17 7.00006" stroke="#0061EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Нет
+                                </label>
+
+                                <input type="radio" id="q1_yes" name="question_1" value="Да">
+                                <label for="q1_yes">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 13.5L8.63636 18L21 6" stroke="#0061EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Да
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal__template__test__content__buttons">
+                            <!-- На первом вопросе шага назад нет. Он появляется только на втором и так далее -->
+                            <button>
+                                <picture>
+                                    <img src="img/prev_test.svg" alt="">
+                                </picture>
+                            </button>
+
+                            <!-- На последнем вопросе шага вперед нет. -->
+                            <!-- Пока на вопрос не ответили, кнопка disabled. Чтобы пройти к следующему шагу, необходимо ответить на вопрос -->
+                            <button disabled>
+                                Далее
+                                <picture>
+                                    <img src="img/arrow.svg" alt="">
+                                </picture>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_8">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__test__result">
+                    <div class="modal__template__1__header">
+                        Результат теста
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__test__result__content">
+                        <picture>
+                            <img src="img/a_green.svg" alt="">
+                        </picture>
+                        <p>
+                            <b>Вы не отмечаете типичных симптомов</b><br>
+                            Рекомендуем проходить профилактическое обследование раз в год — особенно при наличии детей, домашних животных или
+                            путешествий
+                        </p>
+                        <div>
+                            <button>Получить консультацию</button>
+                            <button>Сдать анализ на паразитов</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_9">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__test__result">
+                    <div class="modal__template__1__header">
+                        Результат теста
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__test__result__content">
+                        <picture>
+                            <img src="img/a_blue.svg" alt="">
+                        </picture>
+                        <p>
+                            <b>Возможно, ваш организм подает вам сигналы</b><br>
+                            Рекомендуем пройти первичную диагностику на паразитов (анализ кала и консультация паразитолога)
+                        </p>
+                        <div>
+                            <button>Получить консультацию</button>
+                            <button>Сдать анализ на паразитов</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_10">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__test__result">
+                    <div class="modal__template__1__header">
+                        Результат теста
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__test__result__content">
+                        <picture>
+                            <img src="img/a_red.svg" alt="">
+                        </picture>
+                        <p>
+                            <b>Есть веские причины проверить кишечник!</b><br>
+                            Мы рекомендуем пройти полную диагностику: паразиты + ЖКТ + приём врача
+                        </p>
+                        <div>
+                            <button>Получить консультацию</button>
+                            <button>Сдать анализ на паразитов</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_11">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 modal__template__review">
+                    <div class="modal__template__1__header">
+                        <span>
+                            <picture>
+                                <img src="img/review_icon.svg" alt="">
+                            </picture>
+                            Ваш отзыв
+                        </span>
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="modal__template__review__content">
+                        <form action="#" method="post" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input__block">
+                                        <label for="name">Имя *</label>
+                                        <input name="name" type="text" id="name" class="form-control" placeholder="Введите ваше имя" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mt-4 mt-lg-0">
+                                    <div class="input__block">
+                                        <label for="lastname">Фамилия</label>
+                                        <input name="lastname" type="text" id="lastname" class="form-control" placeholder="Фамилия">
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <div class="input__block">
+                                        <label for="phone">Номер телефона *</label>
+                                        <input name="phone" type="text" class="form-control phone__mask" id="phone" placeholder="+7" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <div class="input__block" style="z-index: 12;">
+                                        <label for="phone">Город *</label>
+                                        <div class="custom-select">
+                                            <div class="selected">Выберите город</div>
+
+                                            <div class="options">
+                                                <div data-value="Алматы">Алматы</div>
+                                                <div data-value="Астана">Астана</div>
+                                                <div data-value="Шымкент">Шымкент</div>
+                                            </div>
+
+                                            <select id="citySelect" hidden>
+                                                <option>Алматы</option>
+                                                <option>Астана</option>
+                                                <option>Шымкент</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <div class="input__block">
+                                        <label for="ticket">Номер заявки</label>
+                                        <input name="ticket" type="text" id="ticket" class="form-control" placeholder="Номер заявки">
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4 rating__block">
+                                    <div class="rating__indicator__block">
+                                        <div class="rating__indicator"></div>
+                                    </div>
+                                    <div class="stars__rating">
+
+                                        <input type="radio" name="rating" id="r_1" value="Плохо">
+                                        <input type="radio" name="rating" id="r_2" value="Слабо">
+                                        <input type="radio" name="rating" id="r_3" value="Норм">
+                                        <input type="radio" name="rating" id="r_4" value="Хорошо">
+                                        <input type="radio" name="rating" id="r_5" value="Отлично">
+                                        
+                                        <label class="rating__1" for="r_1">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.4789 2.1825L14.2389 5.7025C14.4789 6.1925 15.1189 6.6625 15.6589 6.7525L18.8489 7.2825C20.8889 7.6225 21.3689 9.1025 19.8989 10.5625L17.4189 13.0425C16.9989 13.4625 16.7689 14.2725 16.8989 14.8525L17.6089 17.9225C18.1689 20.3525 16.8789 21.2925 14.7289 20.0225L11.7389 18.2525C11.1989 17.9325 10.3089 17.9325 9.75893 18.2525L6.76893 20.0225C4.62893 21.2925 3.32893 20.3425 3.88893 17.9225L4.59893 14.8525C4.72893 14.2725 4.49893 13.4625 4.07893 13.0425L1.59893 10.5625C0.138932 9.1025 0.608933 7.6225 2.64893 7.2825L5.83893 6.7525C6.36893 6.6625 7.00893 6.1925 7.24893 5.7025L9.00893 2.1825C9.96893 0.2725 11.5289 0.2725 12.4789 2.1825Z" fill="white" stroke="#C10D0D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            Плохо
+                                        </label>
+                                        
+                                        <label class="rating__2" for="r_2">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.4789 2.1825L14.2389 5.7025C14.4789 6.1925 15.1189 6.6625 15.6589 6.7525L18.8489 7.2825C20.8889 7.6225 21.3689 9.1025 19.8989 10.5625L17.4189 13.0425C16.9989 13.4625 16.7689 14.2725 16.8989 14.8525L17.6089 17.9225C18.1689 20.3525 16.8789 21.2925 14.7289 20.0225L11.7389 18.2525C11.1989 17.9325 10.3089 17.9325 9.75893 18.2525L6.76893 20.0225C4.62893 21.2925 3.32893 20.3425 3.88893 17.9225L4.59893 14.8525C4.72893 14.2725 4.49893 13.4625 4.07893 13.0425L1.59893 10.5625C0.138932 9.1025 0.608933 7.6225 2.64893 7.2825L5.83893 6.7525C6.36893 6.6625 7.00893 6.1925 7.24893 5.7025L9.00893 2.1825C9.96893 0.2725 11.5289 0.2725 12.4789 2.1825Z" fill="white" stroke="#C10D0D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            Слабо
+                                        </label>
+                                        
+                                        <label class="rating__3" for="r_3">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.4789 2.1825L14.2389 5.7025C14.4789 6.1925 15.1189 6.6625 15.6589 6.7525L18.8489 7.2825C20.8889 7.6225 21.3689 9.1025 19.8989 10.5625L17.4189 13.0425C16.9989 13.4625 16.7689 14.2725 16.8989 14.8525L17.6089 17.9225C18.1689 20.3525 16.8789 21.2925 14.7289 20.0225L11.7389 18.2525C11.1989 17.9325 10.3089 17.9325 9.75893 18.2525L6.76893 20.0225C4.62893 21.2925 3.32893 20.3425 3.88893 17.9225L4.59893 14.8525C4.72893 14.2725 4.49893 13.4625 4.07893 13.0425L1.59893 10.5625C0.138932 9.1025 0.608933 7.6225 2.64893 7.2825L5.83893 6.7525C6.36893 6.6625 7.00893 6.1925 7.24893 5.7025L9.00893 2.1825C9.96893 0.2725 11.5289 0.2725 12.4789 2.1825Z" fill="white" stroke="#C10D0D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            Норм
+                                        </label>
+                                        
+                                        <label class="rating__4" for="r_4">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.4789 2.1825L14.2389 5.7025C14.4789 6.1925 15.1189 6.6625 15.6589 6.7525L18.8489 7.2825C20.8889 7.6225 21.3689 9.1025 19.8989 10.5625L17.4189 13.0425C16.9989 13.4625 16.7689 14.2725 16.8989 14.8525L17.6089 17.9225C18.1689 20.3525 16.8789 21.2925 14.7289 20.0225L11.7389 18.2525C11.1989 17.9325 10.3089 17.9325 9.75893 18.2525L6.76893 20.0225C4.62893 21.2925 3.32893 20.3425 3.88893 17.9225L4.59893 14.8525C4.72893 14.2725 4.49893 13.4625 4.07893 13.0425L1.59893 10.5625C0.138932 9.1025 0.608933 7.6225 2.64893 7.2825L5.83893 6.7525C6.36893 6.6625 7.00893 6.1925 7.24893 5.7025L9.00893 2.1825C9.96893 0.2725 11.5289 0.2725 12.4789 2.1825Z" fill="white" stroke="#C10D0D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            Хорошо
+                                        </label>
+                                        
+                                        <label class="rating__5" for="r_5">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.4789 2.1825L14.2389 5.7025C14.4789 6.1925 15.1189 6.6625 15.6589 6.7525L18.8489 7.2825C20.8889 7.6225 21.3689 9.1025 19.8989 10.5625L17.4189 13.0425C16.9989 13.4625 16.7689 14.2725 16.8989 14.8525L17.6089 17.9225C18.1689 20.3525 16.8789 21.2925 14.7289 20.0225L11.7389 18.2525C11.1989 17.9325 10.3089 17.9325 9.75893 18.2525L6.76893 20.0225C4.62893 21.2925 3.32893 20.3425 3.88893 17.9225L4.59893 14.8525C4.72893 14.2725 4.49893 13.4625 4.07893 13.0425L1.59893 10.5625C0.138932 9.1025 0.608933 7.6225 2.64893 7.2825L5.83893 6.7525C6.36893 6.6625 7.00893 6.1925 7.24893 5.7025L9.00893 2.1825C9.96893 0.2725 11.5289 0.2725 12.4789 2.1825Z" fill="white" stroke="#C10D0D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            Отлично
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <div class="input__block">
+                                        <label for="review">Комментарий *</label>
+                                        <textarea name="review" class="form-control" id="review" placeholder="Опишите ваши впечатления" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4 text-end">
+                                    <button type="submit">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_12">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal__template__2 research__modal">
+                    <div class="modal__template__2__header">
+                        <span>
+                            Исследуемые виды паразитов по анализу кала
+                            <button>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="25" cy="25" r="24.25" stroke="#0061EF" stroke-width="1.5"/>
+                                    <path d="M25.3215 26.694L25.3215 13" stroke="#0061EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.9597 19.3478L18.5974 19.3478C17.9221 19.3478 17.3747 19.8952 17.3747 20.5705L17.3747 32.8482C17.3747 33.5235 17.9221 34.0709 18.5974 34.0709L32.0468 34.0709C32.7221 34.0709 33.2695 33.5235 33.2695 32.8482L33.2695 20.5705C33.2695 19.8952 32.7221 19.3478 32.0468 19.3478L28.6845 19.3478" stroke="#0061EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M28.3786 16.0566L25.3219 12.9999L22.2652 16.0566" stroke="#0061EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Поделиться
+                            </button>
+                        </span>
+                        <picture data-bs-dismiss="modal" class="d-none d-lg-block">
+                            <img src="img/close.svg" alt="">
+                        </picture>
+                        <picture data-bs-dismiss="modal" class="d-lg-none">
+                            <img src="img/close_white.svg" alt="">
+                        </picture>
+                    </div>
+                    <div class="research__modal__content">
+                        <div>
+                            <div class="accordion-item">
+                                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#a_1">
+                                    1. Amoebida (Амебы)
+                                    <span class="icon">
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </button>
+                                <div id="a_1" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p><strong>Что такое Amoebida?</strong></p>
+                                        <p>Amoebida — это порядок простейших организмов из массива Rhizopoda, класс Lobosea, включающий в себя «голые» амёбы
+                                            без защитной оболочки Эти организмы подвижны благодаря псевдоподиям — временным клеточным выростам, при помощи
+                                            которых они перемещаются и захватывают пищу</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#a_2">
+                                    2. Lamblia intestinalis (Лямблия)
+                                    <span class="icon">
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </button>
+                                <div id="a_2" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p><strong>Чем они опасны для человека?</strong></p>
+                                        <p>Один из наиболее значимых для человека видов — Entamoeba histolytica, вызывающий амёбную дизентерию и
+                                            кишечные инфекции По данным UC Davis, этот паразит ежегодно заражает до 50 миллионов человек, приводя к
+                                            примерно 70 000 смертей из-за язвенного колита, печеночных абсцессов и других осложнений</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ---------- для формы выбора города ----------
+            const cityForm = document.querySelector('.check__city');
+            if (cityForm) {
+                // находим кнопку именно ВНУТРИ этой формы
+                const cityBtn = cityForm.querySelector('button');
+                // находим все радиокнопки с name="city" внутри формы
+                const radios = cityForm.querySelectorAll('input[name="city"]');
+
+                const updateCityButton = () => {
+                // активируем кнопку, если хотя бы один радиобаттон выбран
+                const anyChecked = Array.from(radios).some(r => r.checked);
+                cityBtn.disabled = !anyChecked;
+                };
+
+                // подписываемся на изменение каждой радиокнопки
+                radios.forEach(r => r.addEventListener('change', updateCityButton));
+
+                // начальная проверка при загрузке страницы
+                updateCityButton();
+            }
+
+            // ---------- (опционально) для формы с штрих-кодом ----------
+            const barcodeInput = document.getElementById('f1');
+            if (barcodeInput) {
+                // находим кнопку submit только внутри модального окна modal_1
+                const barcodeBtn = document.querySelector('#modal_1 button[type="submit"]');
+                if (barcodeBtn) {
+                barcodeInput.addEventListener('input', function() {
+                    barcodeBtn.disabled = this.value.trim().length === 0;
+                });
+                // начальная проверка
+                barcodeBtn.disabled = barcodeInput.value.trim().length === 0;
+                }
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const steps = document.querySelectorAll(".step");
+            const indicatorLine = document.querySelector(".indicator__line");
+            const questionBlock = document.querySelector(".question__block p");
+            const answersContainer = document.querySelector(".question__block > div");
+
+            const btnPrev = document.querySelector(".modal__template__test__content__buttons button:first-child");
+            const btnNext = document.querySelector(".modal__template__test__content__buttons button:last-child");
+
+            let currentStep = 1;
+            const totalSteps = 10;
+
+            const QUESTIONS = [
+                "1. Часто ли у вас бывают тяжесть, вздутие или дискомфорт в животе?",
+                "2. Есть ли у вас частая усталость без видимых причин?",
+                "3. Бывают ли частые головные боли?",
+                "4. Есть ли проблемы со сном?",
+                "5. Заметили ли вы ухудшение состояния кожи?",
+                "6. Есть ли снижение аппетита?",
+                "7. Часто ли вы ощущаете слабость?",
+                "8. Есть ли неприятный запах изо рта?",
+                "9. Понизилась ли работоспособность?",
+                "10. Бывают ли частые расстройства пищеварения?"
+            ];
+
+            function updateStep() {
+                // Обновляем текст вопроса
+                questionBlock.textContent = QUESTIONS[currentStep - 1];
+
+                // Очистка активных/завершенных шагов
+                steps.forEach((step, i) => {
+                    step.classList.remove("active__step");
+                    step.classList.remove("completed__step");
+
+                    // Прошедшие шаги
+                    if (i < currentStep - 1) {
+                        step.classList.add("completed__step");
+                    }
+
+                    // Текущий шаг
+                    if (i === currentStep - 1) {
+                        step.classList.add("active__step");
+                    }
+                });
+
+                // Прогресс бар
+                const percent = ((currentStep - 1) / (totalSteps - 1)) * 100;
+                indicatorLine.innerHTML = `<div style="
+                    position:absolute; top:0; left:0;
+                    width:${percent}%;
+                    height:100%;
+                    background: linear-gradient(to right, #40ADE9, #F31155);
+                    border-radius:2px;
+                    transition: width .3s ease;
+                "></div>`;
+
+                // Кнопки
+                btnPrev.style.visibility = currentStep === 1 ? "hidden" : "visible";
+                btnNext.style.display = currentStep === totalSteps ? "none" : "flex";
+
+                // Блокировка кнопки, пока ответ не выбран
+                const radios = answersContainer.querySelectorAll("input");
+                btnNext.disabled = ![...radios].some(r => r.checked);
+            }
+
+            answersContainer.addEventListener("change", () => {
+                btnNext.disabled = false;
+            });
+
+            btnNext.addEventListener("click", () => {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    updateStep();
+                }
+            });
+
+            btnPrev.addEventListener("click", () => {
+                if (currentStep > 1) {
+                    currentStep--;
+                    updateStep();
+                }
+            });
+
+            updateStep();
+        });
+    </script>
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <!-- Скрипты -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/aos.js"></script>
+
+</body>
+
+</html>
