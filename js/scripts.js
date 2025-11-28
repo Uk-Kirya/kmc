@@ -229,6 +229,79 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    var owl = $('.benefits');
+    owl.owlCarousel({
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 1,
+                stagePadding: 0,
+                margin: 0,
+                nav: true,
+                dots: true,
+            },
+            576: {
+                items: 1.2,
+                stagePadding: 150,
+                margin: 70,
+                nav: true,
+                dots: false,
+            },
+            992: {
+                items: 2,
+                stagePadding: 150,
+                margin: 70,
+                nav: true,
+                dots: false,
+            },
+            1200: {
+                items: 3,
+                stagePadding: 150,
+                margin: 70,
+                nav: true,
+                dots: false,
+            }
+        }
+    });
+})
+
+
+$(document).ready(function () {
+    var owl = $('.carousel__6');
+    owl.owlCarousel({
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 0,
+                nav: true,
+                dots: true,
+            },
+            576: {
+                items: 2,
+                margin: 30,
+                nav: true,
+                dots: false,
+            },
+            992: {
+                items: 2.3,
+                stagePadding: 150,
+                margin: 30,
+                nav: true,
+                dots: false,
+            },
+            1200: {
+                items: 2.3,
+                margin: 30,
+                nav: true,
+                dots: false,
+            }
+        }
+    });
+})
+
+
+$(document).ready(function () {
     $("a.topLink").click(function () {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top + "px"
