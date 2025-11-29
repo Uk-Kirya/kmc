@@ -302,6 +302,42 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    var owl = $('.reviews2');
+    owl.owlCarousel({
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 15,
+                nav: true,
+                dots: true,
+            },
+            576: {
+                items: 2,
+                margin: 30,
+                nav: true,
+                dots: false,
+            },
+            992: {
+                items: 2.3,
+                stagePadding: 150,
+                margin: 30,
+                nav: true,
+                dots: false,
+            },
+            1200: {
+                items: 2.3,
+                margin: 30,
+                stagePadding: 200,
+                nav: true,
+                dots: false,
+            }
+        }
+    });
+})
+
+
+$(document).ready(function () {
     $("a.topLink").click(function () {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top + "px"
