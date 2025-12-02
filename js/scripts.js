@@ -338,6 +338,38 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    var owl = $('.offers');
+    owl.owlCarousel({
+        autoHeight: true,
+        dots: false,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1.2,
+                margin: 0,
+                nav: false,
+            },
+            576: {
+                items: 1.2,
+                margin: 15,
+                nav: false,
+            },
+            992: {
+                items: 2,
+                margin: 30,
+                nav: true,
+            },
+            1200: {
+                items: 2,
+                margin: 30,
+                nav: true,
+            }
+        }
+    });
+})
+
+
+$(document).ready(function () {
     $("a.topLink").click(function () {
         $("html, body").animate({
             scrollTop: $($(this).attr("href")).offset().top + "px"

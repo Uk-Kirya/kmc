@@ -45,6 +45,12 @@
 ## 📄 Список страниц Личного кабинета
 
 1. **Авторизация** — `cabinet-auth.html`  
+2. **Подтверждение кодом** — `cabinet-auth-code.html`  
+3. **Настройки профиля** — `cabinet-profile.html`  
+4. **Dashboad пустой** — `cabinet-dashboard-empty.html`  
+5. **Dashboad с информацией** — `cabinet-dashboard-full.html`  
+6. **Dashboad визиты** — `cabinet-visits.html`  
+7. **Dashboad Платежи и бонусы** — `cabinet-payments.html`  
 
 ---
 
