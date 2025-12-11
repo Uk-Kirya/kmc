@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 body {
     font-family: "Mulish", sans-serif !important;
@@ -620,6 +621,8 @@ header .col > div:last-child > a {
 
 .cart__container__block__header {
     display: flex;
+    position: fixed;
+    width: 482px;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -639,6 +642,7 @@ header .col > div:last-child > a {
     display: flex;
     flex-direction: column;
     padding: 0 37px;
+    margin-top: 100px;
     border-radius: 30px 30px 0 0;
 }
 
@@ -682,13 +686,15 @@ header .col > div:last-child > a {
 
 .cart__container__block__items > div:last-child {
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
     border: 0;
     margin: 0;
 }
 
-.cart__container__block__items > div:last-child > div:last-child {
-    padding-top: 0;
+.cart__container__block__items > div:last-child > div:nth-child(3) {
+    width: 100%;
 }
 
 .cart__container__block__items > div:last-child b {
@@ -707,6 +713,7 @@ header .col > div:last-child > a {
     align-items: center;
     gap: 30px;
     padding: 0 37px;
+    margin-bottom: 3rem;
 }
 
 .cart__container__block__buttons button {
@@ -837,6 +844,13 @@ header .col > div:last-child > a {
 
 .input__block {
     position: relative;
+}
+
+.input__block > i {
+    position: absolute;
+    right: 1rem;
+    top: .9rem;
+    color: #0061EF;
 }
 
 .input__block input,
@@ -2828,7 +2842,8 @@ header .col > div:last-child > a {
 
 .issledovaniya__block input,
 .policy_checkbox input,
-.rss input {
+.rss input,
+#bonus {
     width: 20px;
     height: 20px;
     border-radius: .5rem;
@@ -2840,7 +2855,8 @@ header .col > div:last-child > a {
 
 .issledovaniya__block input:checked,
 .policy_checkbox input:checked,
-.rss input:checked {
+.rss input:checked,
+#bonus:checked {
     background: url(../img/check.svg) center no-repeat #fff;
     border: 1.5px solid #0061EF;
 }
@@ -8318,6 +8334,53 @@ input::-webkit-inner-spin-button {
     text-align: end;
 }
 
+.bonuses__cart__field {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    gap: 1.5rem 0 !important;
+}
+
+.bonuses__cart__field > div:first-child label {
+    color: #0061EF;
+    font-size: .75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.bonuses__cart__field label {
+    background-color: #fff;
+}
+
+.bonuses__cart__field > div {
+    width: 100%;
+}
+
+.bonuses__cart__field > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bonuses__cart__field > div:first-child > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.bonuses__cart__field > div:first-child > div:last-child {
+    font-weight: 700;
+    font-size: .75rem;
+    color: #0DC143;
+}
+
+.bonuses__cart__field > div:last-child {
+    background-color: gold;
+}
+
 @media (min-width: 1440px) {
 
     .container,
@@ -11620,6 +11683,17 @@ input::-webkit-inner-spin-button {
     .pay__modal__3 p span {
         font-size: 1rem;
         display: block;
+    }
+
+    .cart__container__block__header {
+        display: flex;
+        position: fixed;
+        width: calc(100% - 16px);
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 30px 30px 0 0;
+        background-color: #FAF9F8;
     }
 
 }
