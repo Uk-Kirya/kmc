@@ -97,30 +97,51 @@ $(document).ready(function () {
         autoHeight: true,
         responsive: {
             0: {
-                items: 1.2,
+                items: 1.4,
                 stagePadding: 0,
-                margin: 22,
+                margin: 16,
                 nav: true,
                 dots: true,
             },
             576: {
+                items: 1,
+                stagePadding: 70,
+                margin: 16,
+                nav: true,
+                dots: false,
+            },
+            768: {
                 items: 2,
-                stagePadding: 150,
-                margin: 30,
+                stagePadding: 50,
+                margin: 16,
                 nav: true,
                 dots: false,
             },
             992: {
-                items: 2,
-                stagePadding: 150,
-                margin: 30,
+                items: 3,
+                stagePadding: 50,
+                margin: 16,
                 nav: true,
                 dots: false,
             },
             1200: {
+                items: 3,
+                stagePadding: 150,
+                margin: 28,
+                nav: true,
+                dots: false,
+            },
+            1400: {
+                items: 3,
+                stagePadding: 150,
+                margin: 28,
+                nav: true,
+                dots: false,
+            },
+            1500: {
                 items: 4,
                 stagePadding: 150,
-                margin: 30,
+                margin: 28,
                 nav: true,
                 dots: false,
             }
@@ -424,6 +445,23 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
+
+/***********************
+ * SCROLL LOCK
+ ***********************/
+const body = document.body;
+
+function lockScroll() {
+    body.classList.add("no-scroll");
+}
+
+function unlockScroll() {
+    body.classList.remove("no-scroll");
+}
+
+/***********************
+ * ELEMENTS
+ ***********************/
 const menuOpenBtns = document.querySelectorAll("[data-menu-open]");
 const menuCloseBtns = document.querySelectorAll("[data-menu-close]");
 const menuContainer = document.querySelector("[data-menu-container]");
@@ -436,77 +474,118 @@ const ContainerCart = document.querySelector("[data-container-cart]");
 const CartOpenBtns = document.querySelectorAll("[data-cart-open]");
 const CartCloseBtns = document.querySelectorAll("[data-cart-close]");
 
-// Открытие меню
+/***********************
+ * SCROLL STATE CHECK
+ ***********************/
+function checkScrollState() {
+    const isMenuOpen =
+        menuContainer.classList.contains("active") ||
+        menuContainerMobile.classList.contains("active") ||
+        menuContainerMobile.classList.contains("active_cart");
+
+    const isCartOpen = ContainerCart.classList.contains("active");
+    const isCookieOpen = ContainerCookie?.classList.contains("active");
+
+    if (isMenuOpen || isCartOpen || isCookieOpen) {
+        lockScroll();
+    } else {
+        unlockScroll();
+    }
+}
+
+/***********************
+ * MENU OPEN
+ ***********************/
 menuOpenBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         menuContainer.classList.add("active");
         menuContainerMobile.classList.add("active");
         menuContainerMobile.classList.remove("active_cart");
         ContainerCart.classList.remove("active");
+
+        checkScrollState();
     });
 });
 
-// Закрытие меню (любая кнопка закрытия)
+/***********************
+ * MENU CLOSE
+ ***********************/
 menuCloseBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         menuContainer.classList.remove("active");
         menuContainerMobile.classList.remove("active");
         menuContainerMobile.classList.remove("active_cart");
         ContainerCart.classList.remove("active");
+
+        checkScrollState();
     });
 });
 
-// Закрытие по Esc
-document.addEventListener("keydown", function (e) {
+/***********************
+ * ESC CLOSE ALL
+ ***********************/
+document.addEventListener("keydown", e => {
     if (e.key === "Escape") {
         menuContainer.classList.remove("active");
         menuContainerMobile.classList.remove("active");
         menuContainerMobile.classList.remove("active_cart");
         ContainerCart.classList.remove("active");
+
+        checkScrollState();
     }
 });
 
-// Закрытие cookie alert
+/***********************
+ * COOKIE CLOSE
+ ***********************/
 if (CookieCloseBtn) {
     CookieCloseBtn.addEventListener("click", () => {
         ContainerCookie.classList.remove("active");
+        checkScrollState();
     });
 }
 
-// Открытие предпросмотра корзины
+/***********************
+ * CART OPEN
+ ***********************/
 CartOpenBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         ContainerCart.classList.add("active");
         menuContainer.classList.remove("active");
+        menuContainerMobile.classList.remove("active");
         menuContainerMobile.classList.add("active_cart");
+
+        checkScrollState();
     });
 });
 
-// Закрытие предпросмотра корзины (любая кнопка закрытия)
+/***********************
+ * CART CLOSE
+ ***********************/
 CartCloseBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         ContainerCart.classList.remove("active");
         menuContainerMobile.classList.remove("active_cart");
-        menuContainerMobile.classList.remove("active");
+
+        checkScrollState();
     });
 });
 
-
+/***********************
+ * CUSTOM SELECT
+ ***********************/
 document.querySelectorAll('.custom-select').forEach(selectBox => {
     const selected = selectBox.querySelector('.selected');
     const options = selectBox.querySelector('.options');
     const hiddenSelect = selectBox.querySelector('select');
 
-    // Открытие/закрытие списка
-    selected.addEventListener("click", () => {
+    selected.addEventListener("click", e => {
+        e.stopPropagation();
         const isOpen = options.style.display === "block";
-        // Закрываем все открытые селекты
         document.querySelectorAll('.options').forEach(o => o.style.display = "none");
-        // Переключаем текущий
         options.style.display = isOpen ? "none" : "block";
     });
 
-    // Выбор значения
     options.querySelectorAll("div").forEach(opt => {
         opt.addEventListener("click", () => {
             selected.textContent = opt.textContent;
@@ -516,42 +595,70 @@ document.querySelectorAll('.custom-select').forEach(selectBox => {
     });
 });
 
-// Закрытие при клике вне селекта
-document.addEventListener("click", (e) => {
-    if (!e.target.closest('.custom-select')) {
-        document.querySelectorAll('.options').forEach(o => o.style.display = "none");
-    }
+document.addEventListener("click", () => {
+    document.querySelectorAll('.options').forEach(o => o.style.display = "none");
 });
 
-
+/***********************
+ * ACCORDION BLOCKS
+ ***********************/
 document.querySelectorAll('.issledovaniya__block').forEach(block => {
-    const header = block.querySelector('.issledovaniya__block__zag');
-
-    header.addEventListener('click', () => {
-        block.classList.toggle('open');
-    });
+    block.querySelector('.issledovaniya__block__zag')
+        .addEventListener('click', () => {
+            block.classList.toggle('open');
+        });
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const blocks = document.querySelectorAll(".zhkt__block");
-
-    blocks.forEach(block => {
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".zhkt__block").forEach(block => {
         const header = block.querySelector("div:first-child");
         const content = block.querySelector("div:last-child");
 
         header.addEventListener("click", () => {
             const isOpen = block.classList.contains("open");
-
-            if (isOpen) {
-                // закрываем
-                content.style.display = "none";
-                block.classList.remove("open");
-            } else {
-                // открываем
-                content.style.display = "block";
-                block.classList.add("open");
-            }
+            content.style.display = isOpen ? "none" : "block";
+            block.classList.toggle("open");
         });
+    });
+});
+
+
+document.querySelectorAll('.banner__2__text').forEach(block => {
+    const tabButtons = block.querySelectorAll('.banner__2__text__buttons a');
+    const tabTexts = block.querySelectorAll('.checkup__tab p');
+
+    tabButtons.forEach((btn, index) => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+
+            // Кнопки
+            tabButtons.forEach(b => b.classList.remove('active__tab'));
+            btn.classList.add('active__tab');
+
+            // Тексты
+            tabTexts.forEach(text => text.classList.remove('active__tab__text'));
+            tabTexts[index].classList.add('active__tab__text');
+        });
+    });
+});
+
+
+document.querySelectorAll('.file__field').forEach(field => {
+    const button = field.querySelector('button');
+    const input = field.querySelector('input[type="file"]');
+    const text = field.querySelector('span');
+
+    // Клик по кнопке → открываем выбор файла
+    button.addEventListener('click', () => {
+        input.click();
+    });
+
+    // Файл выбран → показываем имя
+    input.addEventListener('change', () => {
+        if (input.files.length > 0) {
+            text.textContent = input.files[0].name;
+        } else {
+            text.textContent = 'Файл не выбран';
+        }
     });
 });

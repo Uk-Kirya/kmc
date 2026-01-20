@@ -27,7 +27,7 @@
 10. **Цены** — `prices.html`  
 11. **Акции** — `promotions.html`  
 12. **Паразитология** — `parazit.html`  
-13. **Диагностика паразитов** — `diagnostics-parazits.html`  
+13. **Диагностика паразитов** — `diagnostic-parazits.html`  
 14. **С чего начать?** — `start.html`  
 15. **Анализы ЖКТ** — `zhkt.html`  
 16. **О нас** — `about.html`  

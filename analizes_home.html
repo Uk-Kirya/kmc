@@ -339,7 +339,7 @@
         <div class="container inner__header__block">
             <div class="row">
                 <div class="col">
-                    <div class="inner__header" style="background-color: #DEF0F6;">
+                    <div class="inner__header inner__header__1">
                         <ul>
                             <li><a href="#">Главная</a></li>
                             <li>—</li>
@@ -542,9 +542,16 @@
                                 </div>
                             </div>
                             <div class="col-lg-6 file__form mb-4">
-                                <div class="input__block">
-                                    <label for="oso">Прикрепить заключение врача</label>
-                                    <input type="file" placeholder="Файл не выбран" style="padding: .65rem;">
+                                <div class="input__block file__field">
+                                    <label class="d-none d-md-block" for="oso">Прикрепить заключение врача</label>
+                                    <label class="d-md-none" for="oso">Прикрепить файл</label>
+                                    <div>
+                                        <span>Файл не выбран</span>
+                                        <button type="button">Обзор</button>
+
+                                        <!-- ВАЖНО: скрытый input -->
+                                        <input type="file" name="oso" id="oso" hidden>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
