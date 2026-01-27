@@ -6363,6 +6363,7 @@ header .col > div:last-child > a {
     line-height: 150%;
     color: #5B5B5B;
     max-width: 590px;
+    margin: 0 0 40px 0;
 }
 
 .franch__block__1 p strong {
@@ -6378,7 +6379,7 @@ header .col > div:last-child > a {
     font-size: 1rem;
     font-weight: 600;
     display: inline-flex;
-    margin-top: 2rem;
+    margin-top: 26px;
 }
 
 .franch__block__1 button:hover {
@@ -6386,7 +6387,7 @@ header .col > div:last-child > a {
 }
 
 .franch__block__2 {
-    margin-top: 117px;
+    margin-top: 138px;
 }
 
 .franch__block__2 h2 {
@@ -6442,18 +6443,24 @@ header .col > div:last-child > a {
     margin-bottom: 60px;
 }
 
+.franch__block__3 .col-12:last-child {
+    margin-bottom: 0;
+}
+
 .franch__block__4 {
-    margin-top: 330px;
+    padding-top: 343px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    background: url(../img/franch_bg_2.svg) center top no-repeat;
 }
 
 .franch__block__4 > picture {
     position: absolute;
     width: 100%;
-    top: -400px;
+    top: -340px;
     z-index: -1;
 }
 
@@ -6472,13 +6479,14 @@ header .col > div:last-child > a {
 }
 
 .franch__block__4__1 {
-    padding: 3.5rem !important;
+    padding: 85px 0 100px 0 !important;
     background: linear-gradient(to right, #F31155, #40ADE9);
     border-radius: 30px;
     color: #fff;
     margin-top: 60px !important;
     display: flex;
     align-items: center;
+    gap: 100px;
     justify-content: center;
 }
 
@@ -6505,6 +6513,7 @@ header .col > div:last-child > a {
     line-height: 150%;
     font-weight: 600;
     margin: 0;
+    max-width: 313px;
 }
 
 .franch__block__4__2 h3 {
@@ -6515,7 +6524,7 @@ header .col > div:last-child > a {
     background: linear-gradient(to right, #F31155, #40ADE9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 60px 0 0 0;
+    margin: 72px 0 0 0;
 }
 
 .franch__card {
@@ -6526,6 +6535,10 @@ header .col > div:last-child > a {
     align-items: center;
     max-width: 350px;
     text-align: center;
+}
+
+.franch__card__1 {
+    padding-top: 53px;
 }
 
 .franch__card b {
@@ -6540,6 +6553,18 @@ header .col > div:last-child > a {
     font-weight: 600;
     line-height: 150%;
     margin: 0;
+}
+
+.franch__card__dot__1 {
+    position: absolute;
+    top: -77px;
+    right: 3.2rem;
+}
+
+.franch__card__dot__2 {
+    position: absolute;
+    top: -77px;
+    left: 3.2rem;
 }
 
 .franch__card > picture {
@@ -6626,7 +6651,7 @@ header .col > div:last-child > a {
 
 .franch__block__7 {
     position: relative;
-    padding: 267px 0 500px 0;
+    padding: 267px 0 200px 0;
     margin-top: 2rem;
 }
 
@@ -6683,6 +6708,7 @@ header .col > div:last-child > a {
     white-space: nowrap;
     right: 0;
     bottom: 8rem;
+    margin-bottom: 36px;
 }
 
 .franch__block__8 h2,
@@ -6739,15 +6765,20 @@ header .col > div:last-child > a {
     margin-bottom: 200px;
 }
 
+.franch__block__9__3 > div {
+    display: flex;
+    justify-content: center;
+}
+
 .franch__block__9 p {
     font-size: 1rem;
     color: #5B5B5B;
     font-weight: 600;
     text-align: center;
+    max-width: 400px;
 }
 
 .franch__block__9 p strong {
-    display: block;
     color: #0061EF;
     font-weight: 800 !important;
 }
@@ -8697,6 +8728,23 @@ input::-webkit-inner-spin-button {
         display: flex;
         gap: .5rem;
     }
+
+    .franch__block__4__1 {
+        gap: 50px;
+    }
+
+    .franch__block__4__2 > div:nth-child(2) .franch__card__dot__1 {
+        right: 10rem;
+    }
+
+    .franch__block__4__2 > div:nth-child(3) .franch__card__dot__2 {
+        left: 10rem;
+    }
+
+    .franch__block__7 h3 {
+        font-size: 6rem !important;
+        margin-bottom: 4rem !important;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -8708,9 +8756,412 @@ input::-webkit-inner-spin-button {
     .owl-nav {
         max-width: 1140px;
     }
+
+    .franch__block__3 {
+        margin-top: 114px;
+    }
+
+    .franch__block__4 {
+        margin-top: 128px;
+        padding-top: 0;
+        background: none;
+    }
+
+    .franch__card {
+        margin-bottom: 3rem;
+        padding: 0 2rem;
+    }
+
+    .franch__card br {
+        display: none;
+    }
+
+    .franch__card b {
+        font-size: 20px;
+    }
+
+    .franch__card p {
+        font-size: 14px;
+    }
+
+    .franch__card > picture {
+        width: 26px;
+    }
+
+    .franch__block__5 {
+        margin-top: 126px;
+        padding-bottom: 180px;
+    }
+
+    .franch__block__5 > picture {
+        top: -88px;
+    }
+
+    .reviews2 .franch__card {
+        margin-bottom: 0 !important;
+    }
+
+    .franch__block__5 .reviews2 .item picture {
+        width: 75px !important;
+    }
+
+    .franch__block__6 {
+        margin-top: 77px;
+    }
+
+    .franch__block__6 h3 {
+        font-size: 20px;
+        margin: 30px 0 60px 0;
+    }
+
+    .franch__block__6 .franch__card {
+        padding: 0 3rem !important;
+        max-width: 100% !important;
+    }
+
+    .franch__block__6 .franch__card b {
+        font-size: 1rem;
+    }
+
+    .franch__block__6 .franch__card picture {
+        width: 75px !important;
+    }
+
+    .conc_1 .circle__2 {
+        left: 0;
+    }
+
+    .conc_3 .circle__2 {
+        left: 0;
+    }
+
+    .conc_2 .circle__2 {
+        right: 0;
+        left: auto;
+    }
+
+    .franch__block__7 {
+        padding: 0 0 70px 0;
+        margin-top: 100px;
+        background: url(../img/franch__bg__4.svg) left bottom no-repeat;
+    }
+
+    .franch__block__7 > picture {
+        display: none;
+    }
+
+    .franch__block__7 p {
+        font-size: 14px;
+    }
+
+    .franch__block__7 .col {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .franch__block__7 .col picture {
+        width: 256px;
+    }
+
+    .franch__block__7 .col > div:last-child {
+        flex-direction: column;
+        gap: 0;
+        height: auto;
+        align-items: center;
+    }
+
+    .franch__block__7 .col > div:first-child {
+        width: 100%;
+        padding: 0 2rem 3rem 2rem;
+        position: relative;
+    }
+
+    .franch__block__7 .col > div:first-child picture {
+        position: absolute;
+        right: 2rem;
+        bottom: -1rem;
+        width: 76px;
+    }
+
+    .franch__block__7 .col > div:first-child p {
+        max-width: 200px;
+    }
+
+    .franch__block__7 .col > div:last-child p {
+        max-width: 250px;
+    }
+
+    .franch__block__7 .col > div:last-child h3 {
+        position: relative;
+        font-size: 5rem;
+        color: #0061EF;
+        font-weight: 800 !important;
+        white-space: nowrap;
+        bottom: 0;
+    }
+
+    .kz__map {
+        width: 100% !important;
+        margin-bottom: 2rem;
+    }
+
+    .franch__block__8 .col-lg-4 {
+        margin-bottom: 30px;
+    }
+
+    .franch__block__8 .col-lg-4 > div p {
+        font-size: 14px;
+    }
+
+    .franch__block__9 {
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .franch__block__9 > picture {
+        display: none;
+    }
+
+    .franch__block__9__1 {
+        padding-top: 0;
+        position: relative;
+        top: -2.5rem;
+    }
+
+    .franch__block__9__3 {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .franch__block__9 p {
+        font-size: 14px;
+        padding: 0 1rem;
+        max-width: 100%;
+        margin: 1rem 0 2.3rem 0;
+    }
+
+    .franch__block__9 p strong {
+        display: inline-block;
+    }
+
+    .franch__block__9 > .d-xl-none {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1000px;
+        overflow: hidden;
+        top: 150px;
+    }
+
+    .franch__block__10 h2 {
+        font-size: 20px;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .franch__block__10 h4 {
+        font-size: 20px;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .franch__block__10 h5 {
+        font-size: 20px;
+        margin: 0 0 2rem 0;
+    }
+
+    .franch__prices {
+        padding: 20px;
+        border-radius: 30px;
+        background: linear-gradient(to top, #D6EEF6, #F7FCFD);
+    }
+
+    .franch__prices {
+        padding: 1rem;
+        border-radius: 20px;
+        gap: 2.2rem;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-top: 200px;
+        margin-top: 120px;
+    }
+
+    .franch__prices > picture {
+        flex-shrink: 0;
+        width: 180px;
+        position: absolute;
+        top: -100px;
+    }
+
+    .franch__prices__table > div {
+        font-size: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .franch__prices__table > div > div:last-child {
+        font-size: .75rem;
+    }
+
+    .franch__prices__table > div:first-child {
+        font-size: 10px;
+    }
+
+    .franch__prices__table > div:first-child > div:last-child {
+        font-size: 10px;
+    }
+
+    .franch__start {
+        margin-top: 70px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: url(../img/franch__start__bg__mobile.png) center no-repeat;
+    }
+
+    .franch__start h2 {
+        font-size: 40px;
+    }
+    
+    .franch__start__buttons {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .franch__banner__info {
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem 0;
+        margin-top: 2rem;
+    }
+
+    .franch__banner__info > div {
+        width: 50%;
+    }
+
+    .franch__banner__info > div b {
+        font-size: 3rem;
+        font-weight: 700 !important;
+        line-height: 100%;
+    }
+
+    .franch__banner__info > div p {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .card__franch__1 {
+        padding: 0 2rem !important;
+    }
+
+    .franch__block__4__2 .col-xl-4 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .franch__card {
+        padding: 0 !important;
+        margin: 2rem 0 0 0 !important;
+    }
+
+    .franch__block__4__2 .franch__card > picture {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 0 !important;
+        top: 0 !important;
+    }
 }
 
 @media (max-width: 992px) {
+
+    .franch__block__9__3 > div {
+        flex-direction: column;
+    }
+
+    .franch__block__6 {
+        margin-top: 130px;
+    }
+
+    .franch__block__5 {
+        padding: 0;
+    }
+
+    .franch__block__5 h2 {
+        text-align: center;
+        margin-bottom: 20px !important;
+    }
+
+    .franch__block__4__1 {
+        padding: 40px !important;
+        color: #fff;
+        margin-top: 38px !important;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
+
+    .franch__block__4__1 > div strong {
+        font-size: 20px;
+    }
+
+    .franch__block__4__1 > div p {
+        font-size: 14px;
+    }
+
+    .franch__block__4 > picture {
+        top: -100px;
+    }
+    
+    .card__franch__1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .card__franch__1 b {
+        font-size: 20px;
+    }
+
+    .card__franch__1 p {
+        font-size: 14px;
+    }
+
+    .franch__block__2 {
+        margin-top: 92px;
+    }
+
+    .franch__block__1 > picture {
+        margin-top: 0;
+    }
+
+    .franch__block__1 > picture img {
+        width: 150px !important;
+    }
+
+    .franch__block__1 h2 {
+        font-size: 20px;
+        margin: 1.5rem 0;
+        max-width: 280px;
+    }
+
+    .franch__block__1 p {
+        font-size: 1rem;
+        max-width: 280px;
+    }
+
+    .franch__block__1 p strong {
+        font-size: 1rem;
+    }
+
+    .franch__block__1 button {
+        width: 100%;
+        margin-top: 1.5rem;
+        max-width: calc(100% - 30px);
+        justify-content: center;
+    }
+
     .cabinet__number {
         display: none !important;
     }
@@ -10945,29 +11396,6 @@ input::-webkit-inner-spin-button {
         margin-top: 2rem;
     }
 
-    .franch__banner__info {
-        width: 90%;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 3rem 0;
-        margin-top: 2rem;
-    }
-
-    .franch__banner__info > div {
-        width: 50%;
-    }
-
-    .franch__banner__info > div b {
-        font-size: 3rem;
-        font-weight: 700 !important;
-        line-height: 100%;
-    }
-
-    .franch__banner__info > div p {
-        font-size: 1rem;
-        margin: 0;
-    }
-
     .benefit__card__2 {
         padding: 0 2rem;
     }
@@ -11039,387 +11467,6 @@ input::-webkit-inner-spin-button {
 
     .mission__text__2 > picture {
         top: -60px;
-    }
-
-    .franch__block__1 > picture {
-        margin-top: 0;
-    }
-
-    .franch__block__1 > picture img {
-        width: 150px !important;
-    }
-
-    .franch__block__1 h2 {
-        font-size: 20px;
-        margin: 1.5rem 0;
-        max-width: 280px;
-    }
-
-    .franch__block__1 p {
-        font-size: 1rem;
-        max-width: 280px;
-    }
-
-    .franch__block__1 p strong {
-        font-size: 1rem;
-    }
-
-    .franch__block__1 button {
-        width: 100%;
-        margin-top: 1.5rem;
-        max-width: calc(100% - 30px);
-        justify-content: center;
-    }
-
-    .franch__block__2 {
-        margin-top: 92px;
-    }
-
-    .franch__block__2 h2 {
-        font-size: 20px;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .card__franch__1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .card__franch__1 b {
-        font-size: 20px;
-    }
-
-    .card__franch__1 p {
-        font-size: 14px;
-    }
-
-    .franch__block__3 {
-        margin-top: 114px;
-    }
-
-    .franch__block__3 h2 {
-        font-size: 20px;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .franch__block__4 {
-        margin-top: 128px;
-    }
-
-    .franch__block__4 h2 {
-        font-size: 20px;
-    }
-
-    .franch__block__4__1 {
-        padding: 40px !important;
-        color: #fff;
-        margin-top: 38px !important;
-        flex-direction: column;
-        gap: 3.5rem;
-    }
-
-    .franch__block__4__1 > div strong {
-        font-size: 20px;
-    }
-
-    .franch__block__4__1 > div p {
-        font-size: 14px;
-    }
-
-    .franch__block__4 > picture {
-        top: -100px;
-    }
-
-    .franch__block__4__2 h3 {
-        font-size: 20px;
-        margin: 2rem 0 2.8rem 0;
-    }
-
-    .franch__card {
-        margin-bottom: 3rem;
-        padding: 0 2rem;
-    }
-
-    .franch__card br {
-        display: none;
-    }
-
-    .franch__card b {
-        font-size: 20px;
-    }
-
-    .franch__card p {
-        font-size: 14px;
-    }
-
-    .franch__card > picture {
-        width: 26px;
-    }
-
-    .franch__block__5 {
-        margin-top: 126px;
-        padding-bottom: 180px;
-    }
-
-    .franch__block__5 > picture {
-        top: -88px;
-    }
-
-    .franch__block__5 h2 {
-        font-size: 20px;
-        margin: 0 0 40px 0;
-        text-align: center;
-    }
-
-    .reviews2 .franch__card {
-        margin-bottom: 0 !important;
-    }
-
-    .franch__block__5 .reviews2 .item picture {
-        width: 75px !important;
-    }
-
-    .franch__block__6 {
-        margin-top: 77px;
-    }
-
-    .franch__block__6 h2 {
-        font-size: 20px;
-    }
-
-    .franch__block__6 h3 {
-        font-size: 20px;
-        margin: 30px 0 60px 0;
-    }
-
-    .franch__block__6 .franch__card {
-        padding: 0 3rem !important;
-        max-width: 100% !important;
-    }
-
-    .franch__block__6 .franch__card b {
-        font-size: 1rem;
-    }
-
-    .franch__block__6 .franch__card picture {
-        width: 75px !important;
-    }
-
-    .conc_1 .circle__2 {
-        left: 0;
-    }
-
-    .conc_3 .circle__2 {
-        left: 0;
-    }
-
-    .conc_2 .circle__2 {
-        right: 0;
-        left: auto;
-    }
-
-    .franch__block__7 {
-        padding: 0 0 70px 0;
-        margin-top: 100px;
-        background: url(../img/franch__bg__4.svg) left bottom no-repeat;
-    }
-
-    .franch__block__7 > picture {
-        display: none;
-    }
-
-    .franch__block__7 h2 {
-        font-size: 20px;
-        margin: 0 0 40px 0;
-    }
-
-    .franch__block__7 p {
-        font-size: 14px;
-    }
-
-    .franch__block__7 .col {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    .franch__block__7 .col picture {
-        width: 256px;
-    }
-
-    .franch__block__7 .col > div:last-child {
-        flex-direction: column;
-        gap: 0;
-        height: auto;
-        align-items: center;
-    }
-
-    .franch__block__7 .col > div:first-child {
-        width: 100%;
-        padding: 0 2rem 3rem 2rem;
-        position: relative;
-    }
-
-    .franch__block__7 .col > div:first-child picture {
-        position: absolute;
-        right: 2rem;
-        bottom: -1rem;
-        width: 76px;
-    }
-
-    .franch__block__7 .col > div:first-child p {
-        max-width: 200px;
-    }
-
-    .franch__block__7 .col > div:last-child p {
-        max-width: 250px;
-    }
-
-    .franch__block__7 .col > div:last-child h3 {
-        position: relative;
-        font-size: 5rem;
-        color: #0061EF;
-        font-weight: 800 !important;
-        white-space: nowrap;
-        bottom: 0;
-    }
-
-    .kz__map {
-        width: 100% !important;
-        margin-bottom: 2rem;
-    }
-
-    .franch__block__8 h2 {
-        font-size: 20px;
-        margin: 70px 0 50px 0;
-    }
-
-    .franch__block__8 .col-lg-4 {
-        margin-bottom: 30px;
-    }
-
-    .franch__block__8 .col-lg-4 > div p {
-        font-size: 14px;
-    }
-
-    .franch__block__9 {
-        margin-top: 100px;
-        position: relative;
-    }
-
-    .franch__block__9 h2 {
-        font-size: 20px;
-        margin: 0 0 20px 0;
-    }
-
-    .franch__block__9 > picture {
-        display: none;
-    }
-
-    .franch__block__9__1 {
-        padding-top: 0;
-        position: relative;
-        top: -2.5rem;
-    }
-
-    .franch__block__9__3 {
-        padding-top: 0;
-        margin-bottom: 0;
-    }
-
-    .franch__block__9 p {
-        font-size: 14px;
-        padding: 0 1rem;
-        margin: 1rem 0 2.3rem 0;
-    }
-
-    .franch__block__9 p strong {
-        display: inline-block;
-    }
-
-    .franch__block__9 > .d-lg-none {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 1000px;
-        overflow: hidden;
-        top: 150px;
-    }
-
-    .franch__block__10 h2 {
-        font-size: 20px;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .franch__block__10 h4 {
-        font-size: 20px;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .franch__block__10 h5 {
-        font-size: 20px;
-        margin: 0 0 2rem 0;
-    }
-
-    .franch__prices {
-        padding: 20px;
-        border-radius: 30px;
-        background: linear-gradient(to top, #D6EEF6, #F7FCFD);
-    }
-
-    .franch__prices {
-        padding: 1rem;
-        border-radius: 20px;
-        gap: 2.2rem;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        padding-top: 200px;
-        margin-top: 120px;
-    }
-
-    .franch__prices > picture {
-        flex-shrink: 0;
-        width: 180px;
-        position: absolute;
-        top: -100px;
-    }
-
-    .franch__prices__table > div {
-        font-size: 1rem;
-        padding: 1.5rem 0;
-    }
-
-    .franch__prices__table > div > div:last-child {
-        font-size: .75rem;
-    }
-
-    .franch__prices__table > div:first-child {
-        font-size: 10px;
-    }
-
-    .franch__prices__table > div:first-child > div:last-child {
-        font-size: 10px;
-    }
-
-    .franch__start {
-        margin-top: 70px;
-        padding-top: 100px;
-        padding-bottom: 100px;
-        background: url(../img/franch__start__bg__mobile.png) center no-repeat;
-    }
-
-    .franch__start h2 {
-        font-size: 40px;
-    }
-    
-    .franch__start__buttons {
-        flex-direction: column;
-        gap: 14px;
     }
 
     .auth__form {
@@ -11912,7 +11959,31 @@ input::-webkit-inner-spin-button {
 
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .franch__block__2 h2 {
+        font-size: 20px;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .franch__block__3 h2 {
+        font-size: 20px;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .franch__block__1 h2,
+    .franch__block__2 h2,
+    .franch__block__3 h2,
+    .franch__block__4 h2,
+    .franch__block__5 h2,
+    .franch__block__6 h2,
+    .franch__block__7 h2,
+    .franch__block__8 h2,
+    .franch__block__9 h2,
+    .franch__block__4__2 h3 {
+        font-size: 20px !important;
+        margin-bottom: 20px !important;
+    }
+}
 
 @media (max-width: 576px) {
     .new__card {
@@ -11988,5 +12059,38 @@ input::-webkit-inner-spin-button {
         object-fit: cover !important;
         width: 100% !important;
         height: 100% !important;
+    }
+
+    .franch__block__4 {
+        margin-top: 0;
+        padding-bottom: 2rem;
+        padding-top: 100px;
+        background: url(../img/franch_bg_3.svg) center top no-repeat;
+    }
+
+    .franch__block__4 h2 {
+        margin-top: 40px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .franch__block__4__2 h3 {
+        letter-spacing: 4px;
+        margin: 2rem 0 !important;
+    }
+
+    .franch__block__4__1 {
+        padding: 3.5rem 0;
+    }
+
+    .franch__block__6 {
+        padding-top: 77px;
+    }
+
+    .franch__block__7 h2 {
+        margin-bottom: 40px !important;
+    }
+
+    .franch__block__8 {
+        margin-top: 70px;
     }
 }
